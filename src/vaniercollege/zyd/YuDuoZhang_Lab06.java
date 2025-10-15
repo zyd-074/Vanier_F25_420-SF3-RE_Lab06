@@ -58,9 +58,18 @@ public class YuDuoZhang_Lab06 extends Application {
         sqr3.setStroke(Color.BLACK);
         sqr3.setFill(null);
         
+        // Circle
+        Circle circle = new Circle(CENTER_X, CENTER_Y, RADIUS);
+        
+        // Lines
+        Line topLeft = new Line(X1, Y1, X3, Y3);
+        Line topRight = new Line(X1 + WIDTH1, Y1, X3 + WIDTH3, Y3);
+        Line botLeft = new Line(X1, Y1 + HEIGHT1, X3, Y3 + HEIGHT3);
+        Line botRight = new Line(X1 + WIDTH1, Y1 + HEIGHT1, X3 + WIDTH3, Y3 + HEIGHT3);
+        
         // Display
         Pane root = new Pane();
-        root.getChildren().addAll(sqr1, sqr2, sqr3);
+        root.getChildren().addAll(sqr1, sqr2, sqr3, circle, topLeft, topRight, botLeft, botRight);
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
         stage.setScene(scene);
         stage.show();

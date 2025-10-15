@@ -42,5 +42,27 @@ public class YuDuoZhang_Lab06 extends Application {
         
         // Constants for the circle's geometry
         final int CENTER_X = 260, CENTER_Y = 260, RADIUS = 150;
+        
+        // Square #1
+        Rectangle sqr1 = new Rectangle(X1, Y1, WIDTH1, HEIGHT1);
+        sqr1.setStroke(Color.BLACK);
+        sqr1.setFill(null);
+        
+        // Square #2
+        Rectangle sqr2 = new Rectangle(X2, Y2, WIDTH2, HEIGHT2);
+        sqr2.setStroke(Color.BLACK);
+        sqr2.setFill(null);
+
+        // Square #3
+        Rectangle sqr3 = new Rectangle(X3, Y3, WIDTH3, HEIGHT3);
+        sqr3.setStroke(Color.BLACK);
+        sqr3.setFill(null);
+        
+        // Display
+        Pane root = new Pane();
+        root.getChildren().addAll(sqr1, sqr2, sqr3);
+        Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
+        stage.setScene(scene);
+        stage.show();
     }
 }

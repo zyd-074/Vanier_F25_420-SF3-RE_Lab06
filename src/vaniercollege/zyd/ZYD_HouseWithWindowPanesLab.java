@@ -51,15 +51,35 @@ public class ZYD_HouseWithWindowPanesLab extends Application {
         Line horLeft = new Line(130, 315, 200, 315);
         Line horRight = new Line(310, 315, 380, 315);
         
+        // Grass & House Property
+        Rectangle grass = new Rectangle(0, 430, 500, 100);
+        grass.setFill(Color.GREEN);
+        Rectangle houseWalk = new Rectangle(100, 430, 300, 15);
+        houseWalk.setFill(Color.BEIGE);
+        
+        // Sun
+        Circle sun = new Circle(430,70,40);
+        sun.setFill(Color.YELLOW);
+        Line sunRay1 = new Line(430, 70, 380, 30);
+        Line sunRay2 = new Line(430, 70, 380, 100);
+        Line sunRay3 = new Line(430, 70, 430, 130);
+        Line sunRay4 = new Line(430, 110, 490, 110);
+        sunRay1.setStroke(Color.YELLOW);
+        sunRay2.setStroke(Color.YELLOW);
+        sunRay3.setStroke(Color.YELLOW);
+        sunRay4.setStroke(Color.YELLOW);
+        
         // Display
         Pane root = new Pane();
-        root.getChildren().addAll(base,roof,chemney,
+        root.getChildren().addAll(grass, houseWalk, base,roof,chemney,
                 door, doorHandle,
                 windowLeft, windowRight,
                 vertLeft, vertRight,
-                horLeft, horRight);
+                horLeft, horRight, 
+                sun, sunRay1, sunRay2, sunRay3, sunRay4);
         Scene scene = new Scene(root, 500, 500);
         stage.setScene(scene);
+        stage.setTitle("House with Window Panes");
         stage.show();
     }
 }
